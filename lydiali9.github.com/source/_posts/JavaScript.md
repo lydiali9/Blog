@@ -341,8 +341,8 @@ alert(person.work == person1.work); // true
 ```
 
 为了进一步了解构造函数的声明方法和原型模式的声明方法, 我们通过图解来了解一下;
-![构造函数方式](../images/gouzao.jpg)
-![原型模式方式](../images/yuanxing.jpg)
+![构造函数方式](../images/gouzao.png)
+![原型模式方式](../images/yuanxing.png)
 
 
 
