@@ -30,8 +30,8 @@ person.work() {
 alert(person.work()); // LynnLi 26 go to work
 ```
 
-* 上面创建了一个对象,并且创建属性和方法,在work()中的this 表示当前作用域下的对象, 也就是表示new Object()实例化出来的那个对象person.
-* 这种JavaScript创建对象最基本的方法, 但是有个缺点,如果想要创建类似的对象,就会产生大量的代码, 如下:
+> 上面创建了一个对象,并且创建属性和方法,在work()中的this 表示当前作用域下的对象, 也就是表示new Object()实例化出来的那个对象person.
+> 这种JavaScript创建对象最基本的方法, 但是有个缺点,如果想要创建类似的对象,就会产生大量的代码, 如下:
 
 例1
 ```javascript
@@ -72,7 +72,7 @@ alert(person.work()); // RayJi 27 go to work
 alert(person1.work()); // RayJi 27 go to work
 ```
 
-为了解决多个类似对象声明的问题, 可以使用工厂模式的方法,这种方法可以解决实例化对象产生大量重复代码的问题.
+> 为了解决多个类似对象声明的问题, 可以使用工厂模式的方法,这种方法可以解决实例化对象产生大量重复代码的问题.
 
 ### 工厂模式
 
@@ -94,7 +94,7 @@ alert(person.work());
 alert(person1.work());
 ```
 
-工厂模式解决了重复实例化的问题, 但是还有一个问题, 就是根本无法识别他们是哪个对象的实例. 如下所示:
+> 工厂模式解决了重复实例化的问题, 但是还有一个问题, 就是根本无法识别他们是哪个对象的实例. 如下所示:
 
 例1
 ```javascript
@@ -149,8 +149,8 @@ alert(person1 instanceof Object); // true
 alert(person2 instanceof Object); // true
 ```
 
-* 不管怎么,他们都是Object类型, 根本无法区别谁是谁的对象.
-* 为了解决如上的问题, ECMAScript中可以采用构造函数(构造方法)可用来解决特定的对象.
+> 不管怎么,他们都是Object类型, 根本无法区别谁是谁的对象.
+> 为了解决如上的问题, ECMAScript中可以采用构造函数(构造方法)可用来解决特定的对象.
 
 ### 构造函数
 
@@ -183,7 +183,7 @@ alert(person1 instanceof Object); // true
 2. 必须new 构造函数明
 3. 必须使用new运算符
 
-* 使用构造函数的方法, 既解决了重复实例化的问题, 有解决了对象识别的问题. 但是问题是这里并没有new Object(), 为什么可以实例化Person(), 这里原理是什么?
+> 使用构造函数的方法, 既解决了重复实例化的问题, 有解决了对象识别的问题. 但是问题是这里并没有new Object(), 为什么可以实例化Person(), 这里原理是什么?
 
 例1
 ``` javascript
@@ -213,7 +213,7 @@ alert(animal instanceof Person);  // false 识别了,但是animal是Animal的对
 alert(animal instanceof Animal);  // true 
 ```
 
-* 对象冒充调用
+对象冒充调用
 
 ```javascript
 function Person(name, age) {
@@ -230,7 +230,8 @@ Person.call(obj, 'LynnLi', 26);   //对象冒充
 alert(obj.work());                // LynnLi 26 go to work
 ```
 
-* 在构造函数中如何使引用类型的值相等
+> 在构造函数中如何使引用类型的值相等
+
 例1
 ```javascript
 function Person(name, age) {
@@ -291,11 +292,12 @@ alert(person.work() == person1.work()); // true
 alert(work()); // NaN go to work
 ```
 
-* 如上方式虽然解决了保证引用地址一致的问题, 但是这种方式又带来了一种新的问题, 全局中的this在对象调用的时候是Person本身, 而当普通函数调用的时候, this有代表window.
+> 如上方式虽然解决了保证引用地址一致的问题, 但是这种方式又带来了一种新的问题, 全局中的this在对象调用的时候是Person本身, 而当普通函数调用的时候, this有代表window.
 
 ### 原型
 
 我们创建每个函数都有一个prototype(原型)属性, 这个属性是一个对象, 他的用途是包含可以有特定类型的所有实例共享的属性个方法.
+
 1. 原型
 ```javascript
 function Person() {}
@@ -322,8 +324,8 @@ function Person(name, age) {
 }
 ```
 
-* 如果是实例方法, 不同的实例化, 他们的方法地址是不一样的,是唯一的;
-* 如果是原型方法, 那么他们的地址是共享的, 都一样;
+> 如果是实例方法, 不同的实例化, 他们的方法地址是不一样的,是唯一的;
+> 如果是原型方法, 那么他们的地址是共享的, 都一样;
 
 ```javascript
 function Person() {}
@@ -348,7 +350,7 @@ alert(person.constructor);          // function Person() {}
 ![构造函数方式](../images/gouzao.png)
 ![原型模式方式](../images/yuanxing.png)
 
-* 在原型模式声明中, 多了两个属性, 这两个属性都是创建对象时自动生成的._proto_属性是实例指向原型对象的一个指针, 它的作用就是指向构造函数的原型属性constructor. 通过这两个属性, 就可以访问到原型里的属性和方法.
+> 在原型模式声明中, 多了两个属性, 这两个属性都是创建对象时自动生成的._proto_属性是实例指向原型对象的一个指针, 它的作用就是指向构造函数的原型属性constructor. 通过这两个属性, 就可以访问到原型里的属性和方法.
 
 如何判断一个对象是否指向了该构造函数的原型对象, 可以使用isPrototypeOf()方法来测试
 ```javascript
@@ -439,7 +441,7 @@ alert(person.hasOwnProperty("name")); // 实例里有返回true, 否则返回fal
 
 ![原型模式方式](../images/gouzaoyuanxing.png)
 
-in操作符会在通过对象能够访问给定属性时返回true, 无论该属性存在于实例中还是原型中
+> in操作符会在通过对象能够访问给定属性时返回true, 无论该属性存在于实例中还是原型中
 
 ```javascript
 alert('name' in person); // true, 存在实例中或者原型中
@@ -454,7 +456,6 @@ alert(person.prototype); // 使用对象实例无法访问到prototype
 alert(person._proto_);   // 使用对象实例访问prototype的指针
 alert(Person.prototype); // 使用构造函数名(对象名)访问prototype
 ```
-
 
 使用字面量的方式创建原型对象
 
@@ -473,7 +474,7 @@ var person = new Person();
 alert(person.work());  // LynnLi 26 go to work
 ```
 
-使用构造函数创建原型对象和使用字面量创建对象在使用上基本相同, 但是还是有一些区别, 字面量创建的方式使用constructor属性不会指向实例, 而会指向Object, 构造函数创建的方式则相反.
+> 使用构造函数创建原型对象和使用字面量创建对象在使用上基本相同, 但是还是有一些区别, 字面量创建的方式使用constructor属性不会指向实例, 而会指向Object, 构造函数创建的方式则相反.
 
 例1
 ```javascript
@@ -510,7 +511,7 @@ alert(person.constructor == Object);  // true
 PS: 字面量方式为什么constructor会指向Object? 因为Person.prototype={}; 这种写法其实就是创建了一个新对象. 而每创建一个函数, 就会同时创建它prototype, 这个对象也会自动获取constructor属性. 所以, 新对象的constructor重写了Person原来的constructor, 因此会指向新对象, 那么新对象没有指定构造函数, 那么就默认为Object. 
 
 原型的声明是有先后顺序的, 所以, 重写的原型回切断之前的原型.
-1.
+例1.
 ```javascript
 function Person() {}
 
@@ -527,7 +528,7 @@ alert(person.work()); // LynnLi 26 go to work
 alert(person.name); // LynnLi
 ```
 
-2.
+例2.
 ```javascript
 function Person() {}
 
@@ -555,9 +556,10 @@ String.prototype.addString = function() {
 }
 ```
 
-原型模式创建对象也有自己的缺点, 它省略了构造函数传参这一过程,它的缺点就是初始化的值都是一致的. 而原型最大的缺点就是它最大的缺点, 那就是共享;
+> 原型模式创建对象也有自己的缺点, 它省略了构造函数传参这一过程,它的缺点就是初始化的值都是一致的. 而原型最大的缺点就是它最大的缺点, 那就是共享;
 
-原型中所有属性是被很多实例共享的, 共享对于函数非常合适, 对于包含基本值的属性也还可以. 但是如果包含引用类型, 就存在一定的问题;
+> 原型中所有属性是被很多实例共享的, 共享对于函数非常合适, 对于包含基本值的属性也还可以. 但是如果包含引用类型, 就存在一定的问题;
+
 ```javascript
 function Person() {}
 
@@ -580,7 +582,7 @@ alert(person1.family);    // brother mother father sister
 // 共享了person添加后的引用类型的原型
 ```
 
-为了解决构造传参和共享的问题, 可以使用组合构造函数+原型模式
+> 为了解决构造传参和共享的问题, 可以使用组合构造函数+原型模式
 
 ### 组合构造函数+原型模式
 
@@ -613,7 +615,7 @@ alert(person.family);     // brother mother father
 
 PS: 这种混合模式很好的解决了传参和引用共享的大难题
 
-原型模式, 不管你是否调用了原型中的共享方法, 它都会初始化原型中的方法, 并且在声明一个对象时, 构造函数+原型部分让人感觉有很怪异, 最好就是把构造函数和原型封装到一起. 为了解决这个问题, 我们可以使用动态原型模式.
+> 原型模式, 不管你是否调用了原型中的共享方法, 它都会初始化原型中的方法, 并且在声明一个对象时, 构造函数+原型部分让人感觉有很怪异, 最好就是把构造函数和原型封装到一起. 为了解决这个问题, 我们可以使用动态原型模式.
 
 ### 动态原型模式
 
@@ -637,7 +639,7 @@ var person1 = new Person('Rayji', 27);
 alert(person1.work());                 // Rayji 27 go to work
 ```
 
-如上方式导致原型每次初始化实例时,都会执行. 但是原型的初始化, 只要第一次初始化, 就可以啦! 没必要每次构造函数实例化的时候都初始化.
+> 如上方式导致原型每次初始化实例时,都会执行. 但是原型的初始化, 只要第一次初始化, 就可以啦! 没必要每次构造函数实例化的时候都初始化.
 
 ```javascript
 function Person() {}
@@ -659,7 +661,7 @@ var person1 = new Person('LynnLi1', 27);
 var person2 = new Person('LynnLi2', 28);
 ```
 
-如上创建对象的方式如果不能满足需求, 可以使用寄生构造函数
+> 如上创建对象的方式如果不能满足需求, 可以使用寄生构造函数
 
 ### 寄生构造函数
 
@@ -731,7 +733,7 @@ alert(child.name); // Jun
 
 ![原型链继承](../images/yuanxinglian.png)
 
-1.
+例1.
 ```javascript
 function Parent() {
     this.name = 'Jun';
@@ -749,7 +751,7 @@ var child = new Child();
 alert(child.name); // Jun 就近原则 实例中有就返回, 没有就去查找原型
 ```
 
-所有的构造函数都继承自Object, 而继承Object是自动完成的, 并不需要程序员手动继承.
+> 所有的构造函数都继承自Object, 而继承Object是自动完成的, 并不需要程序员手动继承.
 
 子类型从属于自己或者他的超类型
 ```javascript
@@ -758,12 +760,12 @@ alert(child instanceof Parent);   // true
 alert(child instanceof Object);   // true
 ```
 
-继承也有之前的问题, 比如字面量重写原型会中断关系, 使用引用类型的原型, 并且子类型还无法给超类行传递参数. 
+> 继承也有之前的问题, 比如字面量重写原型会中断关系, 使用引用类型的原型, 并且子类型还无法给超类行传递参数. 
 
-为了解决引用共享和超类行无法传参的问题, 我们采用一种叫借用构造函数的技术, 或者成为对象冒充(伪造对象, 经典继承)的技术来解决这两个问题.
+> 为了解决引用共享和超类行无法传参的问题, 我们采用一种叫借用构造函数的技术, 或者成为对象冒充(伪造对象, 经典继承)的技术来解决这两个问题.
 
 ### 借用构造函数(对象冒充)
-1. 
+例1. 
 ```javascript
 function Parent(name, age) {
     this.name = name;
@@ -780,7 +782,7 @@ alert(child.name);            // lynnli
 alert(child.family);          // brother monther father
 ```
 
-2. 
+例2. 
 ```javascript
 function Parent(name, age) {
     this.name = name;
@@ -798,7 +800,7 @@ alert(child.name);            // lynnli
 alert(child.family);          // undefined 对象冒充只能继承构造里的信息, 不能继承原型里的信息
 ```
 
-3.
+例3.
 ```javascript
 function Parent(name, age) {
     this.name = name;
@@ -819,7 +821,7 @@ var child1 = new Child('lynnli', 26);
 alert(child1.family);          // brother monther father
 ```
 
-4.
+例4.
 ```javascript
 function Parent(name, age) {
     this.name = name;
@@ -843,7 +845,7 @@ var child = new Child('lynnli', 26);
 alert(child.work());          // child.work is not a function
 ```
 
-借用构造函数虽然解决了刚才的两个问题, 但是没有原型, 复用则无从谈起. 所以我们需要原型链+借用构造函数的模式, 这种模式成为组合模式.
+> 借用构造函数虽然解决了刚才的两个问题, 但是没有原型, 复用则无从谈起. 所以我们需要原型链+借用构造函数的模式, 这种模式成为组合模式.
 
 ### 组合模式
 原型链+借用构造函数
@@ -869,4 +871,147 @@ var child = new Child('lynnli', 26);
 alert(child.work());          // child.work is not a function
 ```
 
-原型链继承之继承原型里面的, 对象冒充只继承构造里面的属性和方法.
+> 原型链继承之继承原型里面的, 对象冒充只继承构造里面的属性和方法.
+
+> 还有一种继承模式叫做: 原型式继承, 这种继承借助原型并基于已有的对象创建新对象.同时还不必因此创建自定义类型.
+
+### 原型式继承
+
+临时中转函数
+```javascript
+function obj(o) {     // o 表示将要传递进去的一个对象
+    function F() {}   // F构造是一个临时新建的对象, 用于存储传递过来的对象
+    F.prototype = o;  // 将o对象实例赋值给F构造函数的原型对象
+    return new F();   // 最后返回这个得到传递过来对象的实例对象
+}
+```
+
+> F.prototype = o 其实就相当于 Child.prototype = new Parent();
+
+这是字面量的声明方法, 相当于var box = new Box();
+```javascript
+var box = {
+    name: 'lynnli',
+    age: 26,
+    family: ['brother', 'mother', 'father']
+}
+var box1 = obj(box);   // box1就等于new F()
+alert(box1.name);      // lynnli
+alert(box1.family);    // brother mother father
+box1.family.push('sister');
+alert(box1.family);    // brother mother father sister
+
+var box2 = obj(box);   // box1就等于new F()
+alert(box2.family);    // brother mother father sister
+
+```
+
+> 引用类型的属性共享了
+> 寄生式继承把原型式+工厂模式结合而来, 目的是为了封装创建对象的过程.
+
+### 寄生式继承
+
+```javascript
+// 临时中转函数
+function obj(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
+
+// 寄生函数
+function create(o) {
+    vat f = obj(o);
+    f.run = function() {
+        return this.name + ' method';
+    }
+    return f;
+}
+
+var box = {
+    name: 'lynnli',
+    age: 26,
+    family: ['brother', 'mother', 'father']
+}
+
+var box1 = create(box);
+alert(box1.name);  // lynnli
+alert(box1.run()); // lynnli method
+```
+
+> 组合式继承是JavaScript最常用的继承模式; 但是组合式继承也有意点小问题, 就是超类型在使用的过程中会被调用两次; 一次是创建子类型的时候, 另一次是子类型构造函数的内部, 寄生组合继承解决了如上问题
+
+### 寄生组合继承
+
+```javascript
+// 临时中转函数
+function obj(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
+
+// 寄生函数
+function create(box, desk) {
+    vat f = obj(box.prototype);
+    desk.prototype = f;
+}
+
+function Box(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Box.prototype.run = function() {
+    return this.name + " " + this.age + " go to work";
+}
+
+function Desk(name, age) {
+    Box.call(this, name, age);  // 对象冒充
+}
+
+// 通过寄生组合继承来实现继承
+create(Box, Desk);             // 这句话用来替代Desk.prototype = new Box();
+
+var desk = new Desk("lynnli", 26);
+alert(desk.run());            // lynnli 26 go to work
+alert(desk.constructor);      // function Box() {}
+```
+
+如上desk.constructor指向了Box, 所以代码如下:
+
+```javascript
+// 临时中转函数
+function obj(o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+}
+
+// 寄生函数
+function create(box, desk) {
+    vat f = obj(box.prototype);
+    f.constructor = desk;       // 调整原型构造指针
+    desk.prototype = f;
+}
+
+function Box(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Box.prototype.run = function() {
+    return this.name + " " + this.age + " go to work";
+}
+
+function Desk(name, age) {
+    Box.call(this, name, age);  // 对象冒充
+}
+
+// 通过寄生组合继承来实现继承
+create(Box, Desk);             // 这句话用来替代Desk.prototype = new Box();
+
+var desk = new Desk("lynnli", 26);
+alert(desk.run());            // lynnli 26 go to work
+alert(desk.constructor);      // function Box() {}
+```
