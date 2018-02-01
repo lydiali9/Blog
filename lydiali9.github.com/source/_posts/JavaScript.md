@@ -236,7 +236,7 @@ alert(obj.work());                // LynnLi 26 go to work
 function Person(name, age) {
     this.name = name;
     this.age = age;
-    this.work = function() {
+    this.work = function() {  // 实例方法
         return this.name + " " + this.age + " go to work";
     }
 }
@@ -295,8 +295,54 @@ alert(work()); // NaN go to work
 
 ### 原型
 
+我们创建每个函数都有一个prototype(原型)属性, 这个属性是一个对象, 他的用途是包含可以有特定类型的所有实例共享的属性个方法.
+1. 原型
+```javascript
+function Person() {}
 
+Person.prototype.name = "LynnLi";    // 原型属性
+Person.prototype.age = 26;
+Person.prototype.work = function() { // 原型方法
+    return this.name + " " + this.age + " go to work";
+}
 
+var person = new Person();
+alert(person.name);   // LynnLi
+alert(person.work()); //LynnLi 26 go to work
+```
+
+2. 构造函数
+```javascript
+function Person(name, age) {
+    this.name = name;         // 实例属性
+    this.age = age;
+    this.work = function() {  // 实例方法
+        return this.name + " " + this.age + " go to work";
+    }
+}
+```
+
+* 如果是实例方法, 不同的实例化, 他们的方法地址是不一样的,是唯一的;
+* 如果是原型方法, 那么他们的地址是共享的, 都一样;
+
+```javascript
+function Person() {}
+
+Person.prototype.name = "LynnLi";    // 原型属性
+Person.prototype.age = 26;
+Person.prototype.work = function() { // 原型方法
+    return this.name + " " + this.age + " go to work";
+}
+
+var person = new Person();
+var person1 = new Person();
+
+alert(person.work == person1.work); // true
+```
+
+为了进一步了解构造函数的声明方法和原型模式的声明方法, 我们通过图解来了解一下;
+![构造函数方式](../images/gouzao.jpg)
+![原型模式方式](../images/yuanxing.jpg)
 
 
 
