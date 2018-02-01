@@ -1,7 +1,7 @@
 title: JavaScript
 date: 2018-01-29 09:09:01
 ---
-JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript.
+关于JavaScript面向对象与原型, 这块核心内容本姑娘已经通过不同的渠道,看书结合视频已经学习了三遍了; 总算能领会其中一点点的真谛了. 所以赶紧总结一下, 希望在以后的板砖过程中能帮助我更加深入的去领悟;
 
 ## 面向对象与原型
 
