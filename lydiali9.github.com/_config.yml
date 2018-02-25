@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://github.com/lydiali9
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -22,7 +22,7 @@ favicon: /favicon.ico
 
 # Social links
 social:
-  github: https://github.com/lydiali9/lydiali9.github.com
+  github: https://github.com/lydiali9
   # twitter: https://twitter.com/your-user-name
   # weibo: http://weibo.com/your-user-name
   # douban: http://douban.com/people/your-user-name
@@ -88,8 +88,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  deploy:
   type: git
   message: "create blog"
-  branch: master
   repo: https://github.com/lydiali9/lydiali9.github.com.git
+  branch: master

@@ -1,5 +1,7 @@
 title: Event Delegation
-date: 2018-02-06 09:09:01
+date: 2018-02-05 09:09:01
+tags: ['event delegation']
+categories: ['event delegation']
 ---
 
 ## 模拟操作

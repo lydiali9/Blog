@@ -301,8 +301,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: lynnli
   count: true
 
 # Hypercomments
@@ -364,6 +364,9 @@ duoshuo_info:
   user_id: 0
   #admin_nickname: Author
 
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: https://github.com/lydiali9/Blog/blob/master/lydiali9.github.com/images/wechatpay1.png?raw=true
+alipay: https://github.com/lydiali9/Blog/blob/master/lydiali9.github.com/images/alipay1.png?raw=true
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410

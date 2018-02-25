@@ -1,7 +1,8 @@
 title: Anonymous functions and closures
 date: 2017-09-01 09:09:01
+tags: ['closures', 'anonymous functions']
+categories: ['closures']
 ---
-
 匿名函数就是没有名字的函数, 闭包是可以访问一个函数作用域里变量的函数.
 
 ## 匿名函数
