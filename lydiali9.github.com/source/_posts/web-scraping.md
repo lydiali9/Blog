@@ -161,3 +161,5 @@ More info:
 * [PhantomJS](http://phantomjs.org/quick-start.html)
 * [How to use PhantomJS with Node.js](https://ourcodeworld.com/articles/read/379/how-to-use-phantomjs-with-node-js)
 * [node-crawler](https://github.com/bda-research/node-crawler)
+* [puppeteer 1](https://github.com/GoogleChrome/puppeteer)
+* [puppeteer 2](https://developers.google.com/web/tools/puppeteer/articles/ssr)

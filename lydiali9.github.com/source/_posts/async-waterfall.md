@@ -7,6 +7,7 @@ categories: ['async', 'waterfall', 'nodeJS', 'callback', 'parallel', 'eachSeries
 
 async作为nodeJS开发常用知名第三方类库是学习node的历程中不可缺少的一部分.
 
+## 概况
 ![node知识框架图](https://github.com/lydiali9/Blog/blob/master/lydiali9.github.com/images/node.png?raw=true)
 
 ## 安装
