@@ -124,6 +124,8 @@ DPR = 物理像素 / 逻辑像素
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> 
 ```
 
-More info: [移动web适配利器-rem](http://www.alloyteam.com/2016/03/mobile-web-adaptation-tool-rem)
-[screensiz](http://screensiz.es/phone)
-[devicepixelrati](https://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)
+More info: 
+* [移动web适配利器-rem](http://www.alloyteam.com/2016/03/mobile-web-adaptation-tool-rem)
+* [screensiz](http://screensiz.es/phone)
+* [devicepixelrati](https://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)
+* [Weinre入门手册](https://github.com/nupthale/weinre)

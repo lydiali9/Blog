@@ -4,3 +4,5 @@ tags: ['vue-ueditor']
 categories: ['vue-ueditor']
 ---
 
+* [UEditor文档](http://fex.baidu.com/ueditor/)
+* [UEditor API](http://ueditor.baidu.com/doc/)

@@ -1313,18 +1313,22 @@ var worker = new Worker('li.js');
 btn.onclick = function(){
   worker.postMessage(ipt.value);//发数据
 }
-worker.onmessage = function(res){
+worker.onmessage = function(res) {
   console.log(res.data);
 }
 // li.js
 var arr = [];
-this.onmessage = function(res){
+this.onmessage = function(res) {
   var data = res.data;
   arr.push(data);
   this.postMessage(arr);
 }
 ```
 
+More info:
+* [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+* [ES6 常用新特性讲解](https://segmentfault.com/a/1190000010230939#articleHeader0)
+* [TypeScript](https://www.typescriptlang.org/docs/home.html)
 
 
 

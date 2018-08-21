@@ -152,5 +152,5 @@ $ db.COLLECTION_NAME.update({"title": "MongoDB"}， {$pullAll: {"author": ["lydi
 ```
 
 ### 相关链接
-[MongoDB 英文文档](https://docs.mongodb.org/manual/)
-[MongoDB 教程](http://www.runoob.com/mongodb/mongodb-tutorial.html)
+* [MongoDB 英文文档](https://docs.mongodb.org/manual/)
+* [MongoDB 教程](http://www.runoob.com/mongodb/mongodb-tutorial.html)

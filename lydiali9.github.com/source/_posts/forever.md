@@ -70,6 +70,7 @@ $ ?watchIgnore: 通过模式匹配忽略监控
 $ -h, ?help: 命令行帮助信息
 ```
 
-More info: [forever](https://www.npmjs.com/package/forever)
-[官网](https://github.com/foreverjs/forever)
+More info: 
+* [forever](https://www.npmjs.com/package/forever)
+* [官网](https://github.com/foreverjs/forever)
 

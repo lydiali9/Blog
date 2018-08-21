@@ -364,5 +364,7 @@ generateToken: function(userId) {
 ```
 
 More info:
-[Authenticate a Node.js API with JSON Web Tokens](https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens)
-[Securing Node.js RESTful APIs with JSON Web Tokens](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
+* [Authenticate a Node.js API with JSON Web Tokens](https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens)
+* [Securing Node.js RESTful APIs with JSON Web Tokens](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
+* [前后端分离实践](https://segmentfault.com/a/1190000012747428)
+* [Token 认证的来龙去脉](https://segmentfault.com/a/1190000013010835)

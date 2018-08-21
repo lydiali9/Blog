@@ -106,5 +106,5 @@ function(err, results) {
 ```
 
 More info: 
-[async](https://caolan.github.io/async/docs.html#)
-[node面试](https://github.com/jimuyouyou/node-interview-questions)
+* [async](https://caolan.github.io/async/docs.html#)
+* [node面试](https://github.com/jimuyouyou/node-interview-questions)

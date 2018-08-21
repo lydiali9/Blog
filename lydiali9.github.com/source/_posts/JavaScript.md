@@ -1017,3 +1017,6 @@ var desk = new Desk("lynnli", 26);
 alert(desk.run());            // lynnli 26 go to work
 alert(desk.constructor);      // function Box() {}
 ```
+
+More info:
+* [JavaScript for Web Development](https://scotch.io/courses/getting-started-with-javascript)

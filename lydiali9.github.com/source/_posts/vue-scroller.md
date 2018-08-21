@@ -233,4 +233,5 @@ $ Vue.use(VueScroller)
 </style>
 ```
 
-More info: [vue-scroller](https://github.com/wangdahoo/vue-scroller)
+More info:
+* [vue-scroller](https://github.com/wangdahoo/vue-scroller)
