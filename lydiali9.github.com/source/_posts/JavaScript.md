@@ -1020,3 +1020,5 @@ alert(desk.constructor);      // function Box() {}
 
 More info:
 * [JavaScript for Web Development](https://scotch.io/courses/getting-started-with-javascript)
+* [谈谈JavaScript中的双向数据绑定](http://www.html-js.com/article/Study-of-twoway-data-binding-JavaScript-talk-about-JavaScript-every-day)
+* [Object.prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)

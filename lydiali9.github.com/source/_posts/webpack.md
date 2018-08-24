@@ -8,3 +8,4 @@ tags: ['webpack']
 * [webpack English](https://webpack.js.org/concepts/)
 * [webpackjs](https://www.webpackjs.com/concepts/hot-module-replacement/)
 * [入门 Webpack，看这篇就够了](https://segmentfault.com/a/1190000006178770#articleHeader0)
+* [Webpack 4 和单页应用入门](https://github.com/wallstreetcn/webpack-and-spa-guide)
